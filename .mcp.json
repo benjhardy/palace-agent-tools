@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "palace-tools": {
+      "command": "python",
+      "args": ["-m", "palace_tools.mcp_server"]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+ "example": "cavity_te101",
+ "geometry_mm": {
+  "a": 22.86,
+  "b": 10.16,
+  "d": 30.0
+ },
+ "tan_d": 0.001,
+ "mesh": {
+  "h_mm": 2.5,
+  "tets": 2395,
+  "order": 2,
+  "unknowns": 17838
+ },
+ "modes": [
+  {
+   "mode": "TE101",
+   "f_palace_ghz": 8.243934363971,
+   "f_analytic_ghz": 8.243877215534543,
+   "rel_err": 6.932227999412177e-06,
+   "q_palace": 1000.000375001,
+   "q_exact": 1000.0002499999374
+  },
+  {
+   "mode": "TE102",
+   "f_palace_ghz": 11.9527443914,
+   "f_analytic_ghz": 11.952312597967993,
+   "rel_err": 3.612635031657874e-05,
+   "q_palace": 1000.000374593,
+   "q_exact": 1000.0002499999374
+  },
+  {
+   "mode": "TE201",
+   "f_palace_ghz": 14.0347854219,
+   "f_analytic_ghz": 14.033879765927292,
+   "rel_err": 6.453354224311703e-05,
+   "q_palace": 1000.000375847,
+   "q_exact": 1000.0002499999374
+  },
+  {
+   "mode": "TE011",
+   "f_palace_ghz": 15.57956615801,
+   "f_analytic_ghz": 15.576685360413224,
+   "rel_err": 0.00018494291501180982,
+   "q_palace": 1000.000375481,
+   "q_exact": 1000.0002499999374
+  },
+  {
+   "mode": "TM110",
+   "f_palace_ghz": 16.1481582188,
+   "f_analytic_ghz": 16.14508578790973,
+   "rel_err": 0.00019030130472086348,
+   "q_palace": 1000.000346724,
+   "q_exact": 1000.0002499999374
+  }
+ ],
+ "check": "pass",
+ "cost": {
+  "ranks": 2,
+  "wall_s": 8.9,
+  "palace_elapsed_s": 6.987,
+  "peak_mem_gb": 0.235,
+  "estimate": {
+   "memory_gb": {
+    "low": 0.2,
+    "typ": 0.21,
+    "high": 0.22
+   },
+   "wall_min": {
+    "low": 0.21,
+    "typ": 0.35,
+    "high": 0.6
+   }
+  }
+ },
+ "palace_version": "v0.16.0-34-gea2e7b23"
+}

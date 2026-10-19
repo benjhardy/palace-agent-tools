@@ -1,0 +1,53 @@
+{
+ "example": "lumped_port_line",
+ "z0_ohm": 75.0,
+ "eps_r": 2.2,
+ "h_mm": 1.0,
+ "w_mm": 3.386553673622131,
+ "length_mm": 30.0,
+ "mesh": {
+  "h_mm": 0.5,
+  "tets": 4450,
+  "unknowns_p2": 34544
+ },
+ "a_two_ports": {
+  "max_abs_dS_vs_analytic": 8.670334655864068e-07,
+  "at_ghz": 10.0,
+  "s11_db_at_5ghz": -8.308513785838,
+  "s11_db_analytic_at_5ghz": -8.308513127408975,
+  "check": "pass",
+  "checks": {
+   "passivity": "pass",
+   "reciprocity": "pass",
+   "energy_balance": "pass",
+   "log": "pass"
+  },
+  "wall_s": 55.1,
+  "peak_mem_gb": 0.652
+ },
+ "b_matched_load": {
+  "s11_db_min": -13.979419795560002,
+  "s11_db_max": -13.979400087950001,
+  "s11_db_expected": -13.979400086720375,
+  "s21_db_at_5ghz": -1.9382002026119995,
+  "s21_db_expected_power_wave": -0.17728747347951382,
+  "palace_s21_power_ratio": 0.6666666666288175,
+  "r1_over_r2": 0.6666666666666666,
+  "check": "warn",
+  "wall_s": 22.6
+ },
+ "ranks": 2,
+ "estimate": {
+  "memory_gb": {
+   "low": 0.69,
+   "typ": 0.93,
+   "high": 1.25
+  },
+  "wall_min": {
+   "low": 1.28,
+   "typ": 2.02,
+   "high": 3.03
+  }
+ },
+ "palace_version": "v0.16.0-34-gea2e7b23"
+}

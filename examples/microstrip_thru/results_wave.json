@@ -1,0 +1,82 @@
+{
+ "example": "microstrip_thru",
+ "ports": "wave",
+ "w_mm": 1.1365975729896272,
+ "h_mm": 0.508,
+ "eps_r": 3.55,
+ "hammerstad_jensen": {
+  "z0": 50.0,
+  "eeff": 2.7865596605017657,
+  "w_over_h": 2.2373967972236755
+ },
+ "cases": [
+  {
+   "length_mm": 20.0,
+   "tets": 14571,
+   "unknowns": 104738,
+   "ranks": 4,
+   "wall_s": 77.8,
+   "palace_elapsed_s": 74.149,
+   "peak_mem_gb": 2.5,
+   "check": "pass",
+   "checks": {
+    "passivity": "pass",
+    "reciprocity": "pass",
+    "energy_balance": "pass",
+    "port_symmetry": "pass",
+    "log": "pass",
+    "wave_port_modes": "pass"
+   },
+   "estimate": {
+    "memory_gb": {
+     "low": 1.49,
+     "typ": 2.18,
+     "high": 2.9
+    },
+    "wall_min": {
+     "low": 0.92,
+     "typ": 2.62,
+     "high": 8.17
+    }
+   }
+  }
+ ],
+ "table": [
+  {
+   "f_ghz": 1.0,
+   "s11_db": -43.804043692,
+   "s21_db": -0.00017673304527322738,
+   "eeff_palace": 2.781295311607696,
+   "eeff_kj": 2.7884554877657988
+  },
+  {
+   "f_ghz": 2.0,
+   "s11_db": -40.07844102841,
+   "s21_db": -0.00041011865861418517,
+   "eeff_palace": 2.784027439084694,
+   "eeff_kj": 2.7918819017336025
+  },
+  {
+   "f_ghz": 5.0,
+   "s11_db": -49.04531377399,
+   "s21_db": 4.7579723223854014e-05,
+   "eeff_palace": 2.8019271503149423,
+   "eeff_kj": 2.8059296616787304
+  },
+  {
+   "f_ghz": 8.0,
+   "s11_db": -43.93292148972,
+   "s21_db": 7.644044849546281e-05,
+   "eeff_palace": 2.827449981237034,
+   "eeff_kj": 2.8227679680467994
+  },
+  {
+   "f_ghz": 10.0,
+   "s11_db": -44.08561535212,
+   "s21_db": 0.0002089550169037028,
+   "eeff_palace": 2.845691185125067,
+   "eeff_kj": 2.8349775722305814
+  }
+ ],
+ "palace_version": "v0.16.0-34-gea2e7b23"
+}

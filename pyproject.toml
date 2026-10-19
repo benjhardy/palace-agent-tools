@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "palace-agent-tools"
+version = "0.1.0"
+description = "JSON-in/JSON-out tools that let AI coding agents set up, lint, run, check and post-process AWS Palace electromagnetic simulations."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Benjamin Hardy" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+keywords = ["palace", "fem", "electromagnetics", "rf", "microwave", "gmsh", "agents", "mcp"]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.optional-dependencies]
+mesh = ["gmsh>=4.11"]
+rf = ["scikit-rf>=0.30"]
+schema = ["jsonschema>=4.18"]
+all = ["gmsh>=4.11", "scikit-rf>=0.30", "jsonschema>=4.18"]
+dev = ["gmsh>=4.11", "scikit-rf>=0.30", "jsonschema>=4.18", "pytest>=7"]
+
+[project.scripts]
+palace-tools = "palace_tools.cli:main"
+palace-tools-mcp = "palace_tools.mcp_server:main"
+
+[tool.setuptools.packages.find]
+include = ["palace_tools*"]
+
+[tool.setuptools.package-data]
+palace_tools = ["data/*.json", "data/schema_0.16/*.json", "data/schema_0.16/config/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

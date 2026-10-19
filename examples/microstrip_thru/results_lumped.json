@@ -1,0 +1,144 @@
+{
+ "example": "microstrip_thru",
+ "ports": "lumped",
+ "w_mm": 1.1365975729896272,
+ "h_mm": 0.508,
+ "eps_r": 3.55,
+ "hammerstad_jensen": {
+  "z0": 50.0,
+  "eeff": 2.7865596605017657,
+  "w_over_h": 2.2373967972236755
+ },
+ "cases": [
+  {
+   "length_mm": 10.0,
+   "tets": 9662,
+   "unknowns": 70066,
+   "ranks": 2,
+   "wall_s": 45.2,
+   "palace_elapsed_s": 41.044,
+   "peak_mem_gb": 1.5,
+   "check": "pass",
+   "checks": {
+    "passivity": "pass",
+    "reciprocity": "pass",
+    "energy_balance": "pass",
+    "port_symmetry": "pass",
+    "log": "pass"
+   },
+   "estimate": {
+    "memory_gb": {
+     "low": 1.18,
+     "typ": 1.58,
+     "high": 2.11
+    },
+    "wall_min": {
+     "low": 1.44,
+     "typ": 2.56,
+     "high": 5.7
+    }
+   }
+  },
+  {
+   "length_mm": 20.0,
+   "tets": 15061,
+   "unknowns": 108722,
+   "ranks": 2,
+   "wall_s": 83.5,
+   "palace_elapsed_s": 77.716,
+   "peak_mem_gb": 2.4,
+   "check": "pass",
+   "checks": {
+    "passivity": "pass",
+    "reciprocity": "pass",
+    "energy_balance": "pass",
+    "port_symmetry": "pass",
+    "log": "pass"
+   },
+   "estimate": {
+    "memory_gb": {
+     "low": 1.69,
+     "typ": 2.26,
+     "high": 3.02
+    },
+    "wall_min": {
+     "low": 2.3,
+     "typ": 4.07,
+     "high": 9.09
+    }
+   }
+  }
+ ],
+ "table": [
+  {
+   "f_ghz": 1.0,
+   "s11_db_L20": -47.082773882530006,
+   "s21_db_L20": -0.00021000676183804935,
+   "z0_two_line_fit": 48.61055288945172,
+   "z0_hj": 50.0,
+   "port_series_l_ph": 149.19245184023512,
+   "eeff_two_line": 2.7918274651241033,
+   "eeff_kj": 2.7884554877657988,
+   "z0_single_line_naive": 49.6654409865794,
+   "eeff_single_line_naive": 2.9436736228223013
+  },
+  {
+   "f_ghz": 2.0,
+   "s11_db_L20": -33.47437377164,
+   "s21_db_L20": -0.002460104924696283,
+   "z0_two_line_fit": 48.709300679379055,
+   "z0_hj": 50.0,
+   "port_series_l_ph": 148.77267079492427,
+   "eeff_two_line": 2.7934880027491245,
+   "eeff_kj": 2.7918819017336025,
+   "z0_single_line_naive": 48.94218275047701,
+   "eeff_single_line_naive": 2.944767206955119
+  },
+  {
+   "f_ghz": 5.0,
+   "s11_db_L20": -22.049082586370005,
+   "s21_db_L20": -0.03021000541496048,
+   "z0_two_line_fit": 49.456918855778774,
+   "z0_hj": 50.0,
+   "port_series_l_ph": 143.54676955516365,
+   "eeff_two_line": 2.8048320578366845,
+   "eeff_kj": 2.8059296616787304,
+   "z0_single_line_naive": 59.92092732625785,
+   "eeff_single_line_naive": 2.9386798532060605
+  },
+  {
+   "f_ghz": 8.0,
+   "s11_db_L20": -19.259484311290002,
+   "s21_db_L20": -0.0602169366263597,
+   "z0_two_line_fit": 50.474725095100105,
+   "z0_hj": 50.0,
+   "port_series_l_ph": 136.50633687920708,
+   "eeff_two_line": 2.824732853393652,
+   "eeff_kj": 2.8227679680467994,
+   "z0_single_line_naive": 39.77913299805507,
+   "eeff_single_line_naive": 2.97953733824182
+  },
+  {
+   "f_ghz": 10.0,
+   "s11_db_L20": -18.50085868837,
+   "s21_db_L20": -0.07316521447084016,
+   "z0_two_line_fit": 50.909777615545515,
+   "z0_hj": 50.0,
+   "port_series_l_ph": 131.4074213296014,
+   "eeff_two_line": 2.8419895758696336,
+   "eeff_kj": 2.8349775722305814,
+   "z0_single_line_naive": 58.00277933193626,
+   "eeff_single_line_naive": 2.9653560635063863
+  }
+ ],
+ "band_summary": {
+  "z0_two_line_median": 49.456918855778774,
+  "z0_two_line_range": [
+   48.58655219611679,
+   51.693439239941256
+  ],
+  "eeff_two_line_vs_kj_max_rel": 0.002473389457375852,
+  "port_series_l_ph_median": 142.84607213852723
+ },
+ "palace_version": "v0.16.0-34-gea2e7b23"
+}

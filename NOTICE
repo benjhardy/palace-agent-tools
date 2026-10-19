@@ -1,0 +1,7 @@
+palace-agent-tools
+Copyright 2026 Benjamin Hardy
+
+This product includes the Palace configuration-file JSON schema (palace_tools/data/schema_0.16/),
+copied unmodified from AWS Palace v0.16 (https://github.com/awslabs/palace).
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+Licensed under the Apache License, Version 2.0.

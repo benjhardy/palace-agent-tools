@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+# solver outputs and meshes produced by the examples
+examples/*/run*/
+examples/*/runs/
+*.msh
+*.brep
+postpro/
+paraview/

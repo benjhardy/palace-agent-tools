@@ -1,0 +1,1062 @@
+>> /usr/lib64/mpich/bin/mpirun -n 2 /opt/palace/bin/palace-x86_64.bin config.json
+
+_____________     _______
+_____   __   \____ __   /____ ____________
+____   /_/  /  __ ` /  /  __ ` /  ___/  _ \
+___   _____/  /_/  /  /  /_/  /  /__/  ___/
+  /__/     \___,__/__/\___,__/\_____\_____/
+
+Git changeset ID: v0.16.0-34-gea2e7b23
+Running with 2 MPI processes, 1 OpenMP thread
+Device configuration: omp,cpu
+Memory configuration: host-std
+libCEED backend: /cpu/self/xsmm/blocked
+
+Added 640 duplicate vertices for interior boundaries in the mesh
+Added 1568 duplicate boundary elements for interior boundaries in the mesh
+Added 1902 boundary elements for material interfaces to the mesh
+Finished partitioning mesh into 2 subdomains
+
+Characteristic length and time scales:
+ Lc = 2.000e-02 m, tc = 6.671e-02 ns
+
+Mesh curvature order: 1
+Mesh bounding box:
+ (Xmin, Ymin, Zmin) = (-1.101e-31, -5.068e-03, +0.000e+00) m
+ (Xmax, Ymax, Zmax) = (+2.000e-02, +5.068e-03, +5.008e-03) m
+
+Parallel Mesh Stats:
+
+                minimum     average     maximum       total
+ vertices          1844        1882        1920        3764
+ edges            10400       10485       10570       20970
+ faces            15942       15977       16013       31955
+ elements          7363        7374        7386       14749
+ neighbors            1           1           1
+
+            minimum     maximum
+ h       0.00483245    0.140997
+ kappa      1.07692     9.37241
+
+Estimated current per-rank memory usage is: Min. 39.4M, Max. 47.5M, Avg. 43.5M, Total 86.9M
+Estimated current per-node memory usage is: Min. 87.0M, Max. 87.0M, Avg. 87.0M, Total 87.0M
+
+Configuring Robin impedance BC for wave ports at attributes:
+ 102: Index = 1, mode = 1, d = 0.000e+00 m,  n = (-1.0,-0.0,-0.0)
+ 103: Index = 2, mode = 1, d = 0.000e+00 m,  n = (+1.0,+0.0,+0.0)
+
+Configuring wave port excitation source term at attributes:
+ 102: Index = 1
+ 103: Index = 2
+
+Configuring Dirichlet PEC BC at attributes:
+ 101, 104-106
+
+Computing adaptive fast frequency response for:
+Excitation 1/2 with index 1 has contributions from:
+ Wave port  1
+Excitation 2/2 with index 2 has contributions from:
+ Wave port  2
+ Dropping 0 small entries in sparse matrix out of 3075156 (0.0%)
+ Dropping 0 small entries in sparse matrix out of 4223372 (0.0%)
+
+Beginning PROM construction offline phase:
+ 39 points for frequency sweep over [5.000e-01, 1.000e+01] GHz
+
+Assembling system matrices, number of global unknowns:
+ H1 (p = 2): 24734, ND (p = 2): 105850, RT (p = 2): 140112
+ Operator assembly level: Partial
+ Mesh geometries:
+  Tetrahedron: P = 20, Q = 11 (quadrature order = 4)
+
+Adding excitation index 1 (1/2):
+
+Assembling multigrid hierarchy:
+ Level 0 (p = 2): 105850 unknowns
+ Level 0 (auxiliary) (p = 2): 24734 unknowns
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.552740e+01
+  1 (restart 0) KSP residual norm 4.388200e-08
+GMRES solver converged in 1 iteration (avg. reduction factor: 1.235e-09)
+ Field energy E (5.614e-11 J) + H (5.512e-11 J) = 1.113e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.567239e+01
+  1 (restart 0) KSP residual norm 1.042324e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 2.922e-12)
+ Field energy E (5.721e-11 J) + H (5.713e-11 J) = 1.143e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.564851e+01
+  1 (restart 0) KSP residual norm 1.224495e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 3.435e-12)
+
+Greedy iteration 1 (n = 4): ω* = 9.234e+00 GHz (3.870e+00), error = 1.948e-01, memory = 0/2
+ Field energy E (5.705e-11 J) + H (5.702e-11 J) = 1.141e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.543367e+01
+  1 (restart 0) KSP residual norm 7.036949e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 1.986e-11)
+
+Greedy iteration 2 (n = 6): ω* = 3.868e+00 GHz (1.621e+00), error = 1.350e-02, memory = 0/2
+ Field energy E (5.594e-11 J) + H (5.608e-11 J) = 1.120e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.555824e+01
+  1 (restart 0) KSP residual norm 2.557423e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 7.192e-12)
+
+Greedy iteration 3 (n = 8): ω* = 6.368e+00 GHz (2.669e+00), error = 1.253e-03, memory = 0/2
+ Field energy E (5.651e-11 J) + H (5.646e-11 J) = 1.130e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.543285e+01
+  1 (restart 0) KSP residual norm 3.497147e-09
+GMRES solver converged in 1 iteration (avg. reduction factor: 9.870e-11)
+
+Greedy iteration 4 (n = 10): ω* = 1.746e+00 GHz (7.319e-01), error = 8.492e-06, memory = 1/2
+ Field energy E (5.586e-11 J) + H (5.556e-11 J) = 1.114e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.558606e+01
+  1 (restart 0) KSP residual norm 1.701330e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 4.781e-12)
+
+Greedy iteration 5 (n = 12): ω* = 7.869e+00 GHz (3.298e+00), error = 3.044e-06, memory = 2/2
+ Field energy E (5.672e-11 J) + H (5.684e-11 J) = 1.136e-10 J
+
+Adaptive sampling converged with 7 frequency samples:
+ n = 14, error = 3.044e-06, tol = 1.000e-04, memory = 2/2
+ Sampled frequencies (GHz): 5.000e-01, 1.000e+01, 9.234e+00, 3.868e+00,
+                            6.368e+00, 1.746e+00, 7.869e+00
+ Sample errors: inf, inf, 1.948e-01, 1.350e-02, 1.253e-03,
+                8.492e-06, 3.044e-06
+
+Adding excitation index 2 (2/2):
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.552675e+01
+  1 (restart 0) KSP residual norm 4.389608e-08
+GMRES solver converged in 1 iteration (avg. reduction factor: 1.236e-09)
+ Field energy E (5.614e-11 J) + H (5.513e-11 J) = 1.113e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.567597e+01
+  1 (restart 0) KSP residual norm 1.015371e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 2.846e-12)
+ Field energy E (5.721e-11 J) + H (5.713e-11 J) = 1.143e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.564965e+01
+  1 (restart 0) KSP residual norm 1.298298e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 3.642e-12)
+
+Greedy iteration 1 (n = 18): ω* = 9.234e+00 GHz (3.870e+00), error = 4.855e-05, memory = 1/2
+ Field energy E (5.706e-11 J) + H (5.702e-11 J) = 1.141e-10 J
+
+  Residual norms for GMRES solve
+  0 (restart 0) KSP residual norm 3.543265e+01
+  1 (restart 0) KSP residual norm 7.002723e-10
+GMRES solver converged in 1 iteration (avg. reduction factor: 1.976e-11)
+
+Greedy iteration 2 (n = 20): ω* = 3.891e+00 GHz (1.631e+00), error = 1.452e-05, memory = 2/2
+ Field energy E (5.594e-11 J) + H (5.609e-11 J) = 1.120e-10 J
+
+Adaptive sampling converged with 4 frequency samples:
+ n = 22, error = 1.452e-05, tol = 1.000e-04, memory = 2/2
+ Sampled frequencies (GHz): 5.000e-01, 1.000e+01, 9.234e+00, 3.891e+00
+ Sample errors: inf, inf, 4.855e-05, 1.452e-05
+ Total offline phase elapsed time: 7.44e+01 s
+
+Beginning fast frequency sweep online phase
+
+Sweeping excitation index 1 (1/2):
+
+It 1/39: ω/2π = 5.000e-01 GHz (total elapsed time = 7.44e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.142e+00 GHz (2.096e-01)
+ Port 1, mode 1: kₙ = 1.743e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 1.743e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.552740e+01
+ Field energy E (5.614e-11 J) + H (5.512e-11 J) = 1.113e-10 J
+ S[1][1] = -1.147e-03-3.183e-03i, |S[1][1]| = -4.941e+01, arg(S[1][1]) = -1.098e+02
+ S[2][1] = +9.395e-01-3.424e-01i, |S[2][1]| = -4.868e-05, arg(S[2][1]) = -2.003e+01
+
+It 2/39: ω/2π = 7.500e-01 GHz (total elapsed time = 7.45e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.712e+00 GHz (3.144e-01)
+ Port 1, mode 1: kₙ = 2.614e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 2.614e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.551331e+01
+ Field energy E (5.609e-11 J) + H (5.518e-11 J) = 1.113e-10 J
+ S[1][1] = -2.453e-03-4.294e-03i, |S[1][1]| = -4.612e+01, arg(S[1][1]) = -1.197e+02
+ S[2][1] = +8.657e-01-5.006e-01i, |S[2][1]| = -1.039e-04, arg(S[2][1]) = -3.004e+01
+
+It 3/39: ω/2π = 1.000e+00 GHz (total elapsed time = 7.47e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 6.283e+00 GHz (4.192e-01)
+ Port 1, mode 1: kₙ = 3.486e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 3.486e+01-7.780e-20i m⁻¹
+
+ Sol. ||E|| = 3.549524e+01
+ Field energy E (5.604e-11 J) + H (5.526e-11 J) = 1.113e-10 J
+ S[1][1] = -4.056e-03-4.893e-03i, |S[1][1]| = -4.394e+01, arg(S[1][1]) = -1.297e+02
+ S[2][1] = +7.654e-01-6.435e-01i, |S[2][1]| = -1.714e-04, arg(S[2][1]) = -4.006e+01
+
+It 4/39: ω/2π = 1.250e+00 GHz (total elapsed time = 7.49e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 7.854e+00 GHz (5.240e-01)
+ Port 1, mode 1: kₙ = 4.358e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 4.358e+01+1.518e-19i m⁻¹
+
+ Sol. ||E|| = 3.547463e+01
+ Field energy E (5.598e-11 J) + H (5.535e-11 J) = 1.113e-10 J
+ S[1][1] = -5.762e-03-4.912e-03i, |S[1][1]| = -4.242e+01, arg(S[1][1]) = -1.396e+02
+ S[2][1] = +6.418e-01-7.669e-01i, |S[2][1]| = -2.426e-04, arg(S[2][1]) = -5.007e+01
+
+It 5/39: ω/2π = 1.500e+00 GHz (total elapsed time = 7.51e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 9.425e+00 GHz (6.288e-01)
+ Port 1, mode 1: kₙ = 5.230e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 5.230e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.545316e+01
+ Field energy E (5.592e-11 J) + H (5.545e-11 J) = 1.114e-10 J
+ S[1][1] = -7.367e-03-4.349e-03i, |S[1][1]| = -4.136e+01, arg(S[1][1]) = -1.494e+02
+ S[2][1] = +4.985e-01-8.668e-01i, |S[2][1]| = -3.087e-04, arg(S[2][1]) = -6.010e+01
+
+It 6/39: ω/2π = 1.750e+00 GHz (total elapsed time = 7.52e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.100e+01 GHz (7.335e-01)
+ Port 1, mode 1: kₙ = 6.102e+01+1.038e-19i m⁻¹
+ Port 2, mode 1: kₙ = 6.102e+01-4.154e-19i m⁻¹
+
+ Sol. ||E|| = 3.543255e+01
+ Field energy E (5.586e-11 J) + H (5.556e-11 J) = 1.114e-10 J
+ S[1][1] = -8.677e-03-3.276e-03i, |S[1][1]| = -4.065e+01, arg(S[1][1]) = -1.593e+02
+ S[2][1] = +3.400e-01-9.404e-01i, |S[2][1]| = -3.612e-04, arg(S[2][1]) = -7.012e+01
+
+It 7/39: ω/2π = 2.000e+00 GHz (total elapsed time = 7.54e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.257e+01 GHz (8.383e-01)
+ Port 1, mode 1: kₙ = 6.975e+01+6.190e-19i m⁻¹
+ Port 2, mode 1: kₙ = 6.975e+01+6.190e-19i m⁻¹
+
+ Sol. ||E|| = 3.541442e+01
+ Field energy E (5.581e-11 J) + H (5.566e-11 J) = 1.115e-10 J
+ S[1][1] = -9.535e-03-1.824e-03i, |S[1][1]| = -4.026e+01, arg(S[1][1]) = -1.692e+02
+ S[2][1] = +1.711e-01-9.852e-01i, |S[2][1]| = -3.931e-04, arg(S[2][1]) = -8.015e+01
+
+It 8/39: ω/2π = 2.250e+00 GHz (total elapsed time = 7.56e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.414e+01 GHz (9.431e-01)
+ Port 1, mode 1: kₙ = 7.849e+01-8.797e-19i m⁻¹
+ Port 2, mode 1: kₙ = 7.849e+01-1.759e-18i m⁻¹
+
+ Sol. ||E|| = 3.540018e+01
+ Field energy E (5.577e-11 J) + H (5.576e-11 J) = 1.115e-10 J
+ S[1][1] = -9.838e-03-1.737e-04i, |S[1][1]| = -4.014e+01, arg(S[1][1]) = -1.790e+02
+ S[2][1] = -3.231e-03-9.999e-01i, |S[2][1]| = -4.001e-04, arg(S[2][1]) = -9.019e+01
+
+It 9/39: ω/2π = 2.500e+00 GHz (total elapsed time = 7.59e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.571e+01 GHz (1.048e+00)
+ Port 1, mode 1: kₙ = 8.722e+01+1.204e-18i m⁻¹
+ Port 2, mode 1: kₙ = 8.722e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.539088e+01
+ Field energy E (5.575e-11 J) + H (5.584e-11 J) = 1.116e-10 J
+ S[1][1] = -9.553e-03+1.472e-03i, |S[1][1]| = -4.030e+01, arg(S[1][1]) = +1.712e+02
+ S[2][1] = -1.775e-01-9.841e-01i, |S[2][1]| = -3.806e-04, arg(S[2][1]) = -1.002e+02
+
+It 10/39: ω/2π = 2.750e+00 GHz (total elapsed time = 7.61e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.728e+01 GHz (1.153e+00)
+ Port 1, mode 1: kₙ = 9.597e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 9.597e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.538716e+01
+ Field energy E (5.574e-11 J) + H (5.591e-11 J) = 1.117e-10 J
+ S[1][1] = -8.716e-03+2.910e-03i, |S[1][1]| = -4.073e+01, arg(S[1][1]) = +1.615e+02
+ S[2][1] = -3.465e-01-9.380e-01i, |S[2][1]| = -3.363e-04, arg(S[2][1]) = -1.103e+02
+
+It 11/39: ω/2π = 3.000e+00 GHz (total elapsed time = 7.63e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.885e+01 GHz (1.258e+00)
+ Port 1, mode 1: kₙ = 1.047e+02-4.142e-18i m⁻¹
+ Port 2, mode 1: kₙ = 1.047e+02-8.283e-18i m⁻¹
+
+ Sol. ||E|| = 3.538921e+01
+ Field energy E (5.576e-11 J) + H (5.597e-11 J) = 1.117e-10 J
+ S[1][1] = -7.434e-03+3.960e-03i, |S[1][1]| = -4.149e+01, arg(S[1][1]) = +1.520e+02
+ S[2][1] = -5.049e-01-8.632e-01i, |S[2][1]| = -2.719e-04, arg(S[2][1]) = -1.203e+02
+
+It 12/39: ω/2π = 3.250e+00 GHz (total elapsed time = 7.65e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.042e+01 GHz (1.362e+00)
+ Port 1, mode 1: kₙ = 1.135e+02-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 1.135e+02-5.252e-18i m⁻¹
+
+ Sol. ||E|| = 3.539675e+01
+ Field energy E (5.580e-11 J) + H (5.602e-11 J) = 1.118e-10 J
+ S[1][1] = -5.867e-03+4.493e-03i, |S[1][1]| = -4.263e+01, arg(S[1][1]) = +1.426e+02
+ S[2][1] = -6.479e-01-7.617e-01i, |S[2][1]| = -1.947e-04, arg(S[2][1]) = -1.304e+02
+
+It 13/39: ω/2π = 3.500e+00 GHz (total elapsed time = 7.68e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.199e+01 GHz (1.467e+00)
+ Port 1, mode 1: kₙ = 1.222e+02-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 1.222e+02-1.308e-17i m⁻¹
+
+ Sol. ||E|| = 3.540907e+01
+ Field energy E (5.585e-11 J) + H (5.605e-11 J) = 1.119e-10 J
+ S[1][1] = -4.213e-03+4.439e-03i, |S[1][1]| = -4.427e+01, arg(S[1][1]) = +1.335e+02
+ S[2][1] = -7.711e-01-6.367e-01i, |S[2][1]| = -1.134e-04, arg(S[2][1]) = -1.405e+02
+
+It 14/39: ω/2π = 3.750e+00 GHz (total elapsed time = 7.70e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.356e+01 GHz (1.572e+00)
+ Port 1, mode 1: kₙ = 1.310e+02-1.604e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.310e+02-1.144e-22i m⁻¹
+
+ Sol. ||E|| = 3.542516e+01
+ Field energy E (5.591e-11 J) + H (5.607e-11 J) = 1.120e-10 J
+ S[1][1] = -2.682e-03+3.803e-03i, |S[1][1]| = -4.664e+01, arg(S[1][1]) = +1.252e+02
+ S[2][1] = -8.706e-01-4.920e-01i, |S[2][1]| = -3.746e-05, arg(S[2][1]) = -1.505e+02
+
+It 15/39: ω/2π = 4.000e+00 GHz (total elapsed time = 7.72e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.513e+01 GHz (1.677e+00)
+ Port 1, mode 1: kₙ = 1.398e+02+1.941e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.398e+02+2.911e-17i m⁻¹
+
+ Sol. ||E|| = 3.544376e+01
+ Field energy E (5.598e-11 J) + H (5.609e-11 J) = 1.121e-10 J
+ S[1][1] = -1.470e-03+2.662e-03i, |S[1][1]| = -5.034e+01, arg(S[1][1]) = +1.189e+02
+ S[2][1] = -9.433e-01-3.320e-01i, |S[2][1]| = +2.418e-05, arg(S[2][1]) = -1.606e+02
+
+It 16/39: ω/2π = 4.250e+00 GHz (total elapsed time = 7.74e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.670e+01 GHz (1.781e+00)
+ Port 1, mode 1: kₙ = 1.486e+02+4.616e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.486e+02-4.640e-17i m⁻¹
+
+ Sol. ||E|| = 3.546353e+01
+ Field energy E (5.606e-11 J) + H (5.610e-11 J) = 1.122e-10 J
+ S[1][1] = -7.346e-04+1.158e-03i, |S[1][1]| = -5.726e+01, arg(S[1][1]) = +1.224e+02
+ S[2][1] = -9.869e-01-1.616e-01i, |S[2][1]| = +6.441e-05, arg(S[2][1]) = -1.707e+02
+
+It 17/39: ω/2π = 4.500e+00 GHz (total elapsed time = 7.77e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.827e+01 GHz (1.886e+00)
+ Port 1, mode 1: kₙ = 1.573e+02-2.745e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.573e+02-4.477e-17i m⁻¹
+
+ Sol. ||E|| = 3.548316e+01
+ Field energy E (5.614e-11 J) + H (5.612e-11 J) = 1.123e-10 J
+ S[1][1] = -5.755e-04-5.215e-04i, |S[1][1]| = -6.220e+01, arg(S[1][1]) = -1.378e+02
+ S[2][1] = -9.999e-01+1.390e-02i, |S[2][1]| = +7.862e-05, arg(S[2][1]) = +1.792e+02
+
+It 18/39: ω/2π = 4.750e+00 GHz (total elapsed time = 7.80e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.985e+01 GHz (1.991e+00)
+ Port 1, mode 1: kₙ = 1.661e+02+2.459e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.661e+02-3.961e-17i m⁻¹
+
+ Sol. ||E|| = 3.550150e+01
+ Field energy E (5.621e-11 J) + H (5.614e-11 J) = 1.124e-10 J
+ S[1][1] = -1.021e-03-2.165e-03i, |S[1][1]| = -5.242e+01, arg(S[1][1]) = -1.152e+02
+ S[2][1] = -9.820e-01+1.892e-01i, |S[2][1]| = +6.543e-05, arg(S[2][1]) = +1.691e+02
+
+It 19/39: ω/2π = 5.000e+00 GHz (total elapsed time = 7.82e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.142e+01 GHz (2.096e+00)
+ Port 1, mode 1: kₙ = 1.749e+02+3.903e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.749e+02-1.121e-16i m⁻¹
+
+ Sol. ||E|| = 3.551765e+01
+ Field energy E (5.628e-11 J) + H (5.617e-11 J) = 1.124e-10 J
+ S[1][1] = -2.025e-03-3.564e-03i, |S[1][1]| = -4.775e+01, arg(S[1][1]) = -1.196e+02
+ S[2][1] = -9.335e-01+3.587e-01i, |S[2][1]| = +2.684e-05, arg(S[2][1]) = +1.590e+02
+
+It 20/39: ω/2π = 5.250e+00 GHz (total elapsed time = 7.84e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.299e+01 GHz (2.201e+00)
+ Port 1, mode 1: kₙ = 1.837e+02-8.204e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.837e+02+4.311e-17i m⁻¹
+
+ Sol. ||E|| = 3.553102e+01
+ Field energy E (5.634e-11 J) + H (5.620e-11 J) = 1.125e-10 J
+ S[1][1] = -3.468e-03-4.535e-03i, |S[1][1]| = -4.487e+01, arg(S[1][1]) = -1.274e+02
+ S[2][1] = -8.559e-01+5.172e-01i, |S[2][1]| = -3.191e-05, arg(S[2][1]) = +1.489e+02
+
+It 21/39: ω/2π = 5.500e+00 GHz (total elapsed time = 7.86e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.456e+01 GHz (2.305e+00)
+ Port 1, mode 1: kₙ = 1.926e+02-4.161e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.926e+02-9.874e-17i m⁻¹
+
+ Sol. ||E|| = 3.554138e+01
+ Field energy E (5.639e-11 J) + H (5.625e-11 J) = 1.126e-10 J
+ S[1][1] = -5.178e-03-4.950e-03i, |S[1][1]| = -4.290e+01, arg(S[1][1]) = -1.363e+02
+ S[2][1] = -7.515e-01+6.597e-01i, |S[2][1]| = -1.030e-04, arg(S[2][1]) = +1.387e+02
+
+It 22/39: ω/2π = 5.750e+00 GHz (total elapsed time = 7.88e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.613e+01 GHz (2.410e+00)
+ Port 1, mode 1: kₙ = 2.014e+02-2.939e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.014e+02-1.124e-16i m⁻¹
+
+ Sol. ||E|| = 3.554886e+01
+ Field energy E (5.643e-11 J) + H (5.630e-11 J) = 1.127e-10 J
+ S[1][1] = -6.945e-03-4.747e-03i, |S[1][1]| = -4.150e+01, arg(S[1][1]) = -1.456e+02
+ S[2][1] = -6.236e-01+7.817e-01i, |S[2][1]| = -1.768e-04, arg(S[2][1]) = +1.286e+02
+
+It 23/39: ω/2π = 6.000e+00 GHz (total elapsed time = 7.91e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.770e+01 GHz (2.515e+00)
+ Port 1, mode 1: kₙ = 2.102e+02+3.008e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.102e+02-1.908e-16i m⁻¹
+
+ Sol. ||E|| = 3.555388e+01
+ Field energy E (5.647e-11 J) + H (5.636e-11 J) = 1.128e-10 J
+ S[1][1] = -8.550e-03-3.940e-03i, |S[1][1]| = -4.052e+01, arg(S[1][1]) = -1.553e+02
+ S[2][1] = -4.761e-01+8.794e-01i, |S[2][1]| = -2.433e-04, arg(S[2][1]) = +1.184e+02
+
+It 24/39: ω/2π = 6.250e+00 GHz (total elapsed time = 7.93e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.927e+01 GHz (2.620e+00)
+ Port 1, mode 1: kₙ = 2.191e+02-5.243e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.191e+02+7.155e-17i m⁻¹
+
+ Sol. ||E|| = 3.555711e+01
+ Field energy E (5.650e-11 J) + H (5.643e-11 J) = 1.129e-10 J
+ S[1][1] = -9.791e-03-2.621e-03i, |S[1][1]| = -3.988e+01, arg(S[1][1]) = -1.650e+02
+ S[2][1] = -3.135e-01+9.496e-01i, |S[2][1]| = -2.931e-04, arg(S[2][1]) = +1.083e+02
+
+It 25/39: ω/2π = 6.500e+00 GHz (total elapsed time = 7.95e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.084e+01 GHz (2.725e+00)
+ Port 1, mode 1: kₙ = 2.279e+02-9.792e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.279e+02-1.849e-16i m⁻¹
+
+ Sol. ||E|| = 3.555936e+01
+ Field energy E (5.652e-11 J) + H (5.650e-11 J) = 1.130e-10 J
+ S[1][1] = -1.051e-02-9.442e-04i, |S[1][1]| = -3.953e+01, arg(S[1][1]) = -1.749e+02
+ S[2][1] = -1.409e-01+9.900e-01i, |S[2][1]| = -3.188e-04, arg(S[2][1]) = +9.810e+01
+
+It 26/39: ω/2π = 6.750e+00 GHz (total elapsed time = 7.98e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.241e+01 GHz (2.829e+00)
+ Port 1, mode 1: kₙ = 2.368e+02+1.562e-09i m⁻¹
+ Port 2, mode 1: kₙ = 2.368e+02-8.942e-17i m⁻¹
+
+ Sol. ||E|| = 3.556148e+01
+ Field energy E (5.655e-11 J) + H (5.657e-11 J) = 1.131e-10 J
+ S[1][1] = -1.062e-02+8.877e-04i, |S[1][1]| = -3.945e+01, arg(S[1][1]) = +1.752e+02
+ S[2][1] = +3.619e-02+9.993e-01i, |S[2][1]| = -3.156e-04, arg(S[2][1]) = +8.793e+01
+
+It 27/39: ω/2π = 7.000e+00 GHz (total elapsed time = 8.00e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.398e+01 GHz (2.934e+00)
+ Port 1, mode 1: kₙ = 2.456e+02-4.207e-09i m⁻¹
+ Port 2, mode 1: kₙ = 2.456e+02+3.182e-16i m⁻¹
+
+ Sol. ||E|| = 3.556424e+01
+ Field energy E (5.658e-11 J) + H (5.664e-11 J) = 1.132e-10 J
+ S[1][1] = -1.009e-02+2.652e-03i, |S[1][1]| = -3.963e+01, arg(S[1][1]) = +1.653e+02
+ S[2][1] = +2.123e-01+9.772e-01i, |S[2][1]| = -2.824e-04, arg(S[2][1]) = +7.774e+01
+
+It 28/39: ω/2π = 7.250e+00 GHz (total elapsed time = 8.02e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.555e+01 GHz (3.039e+00)
+ Port 1, mode 1: kₙ = 2.545e+02-8.811e-09i m⁻¹
+ Port 2, mode 1: kₙ = 2.545e+02+2.530e-16i m⁻¹
+
+ Sol. ||E|| = 3.556831e+01
+ Field energy E (5.661e-11 J) + H (5.671e-11 J) = 1.133e-10 J
+ S[1][1] = -8.991e-03+4.133e-03i, |S[1][1]| = -4.009e+01, arg(S[1][1]) = +1.553e+02
+ S[2][1] = +3.819e-01+9.242e-01i, |S[2][1]| = -2.214e-04, arg(S[2][1]) = +6.755e+01
+
+It 29/39: ω/2π = 7.500e+00 GHz (total elapsed time = 8.05e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.712e+01 GHz (3.144e+00)
+ Port 1, mode 1: kₙ = 2.634e+02-1.740e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.634e+02-9.407e-17i m⁻¹
+
+ Sol. ||E|| = 3.557409e+01
+ Field energy E (5.665e-11 J) + H (5.676e-11 J) = 1.134e-10 J
+ S[1][1] = -7.451e-03+5.149e-03i, |S[1][1]| = -4.086e+01, arg(S[1][1]) = +1.454e+02
+ S[2][1] = +5.396e-01+8.419e-01i, |S[2][1]| = -1.385e-04, arg(S[2][1]) = +5.734e+01
+
+It 30/39: ω/2π = 7.750e+00 GHz (total elapsed time = 8.07e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.869e+01 GHz (3.249e+00)
+ Port 1, mode 1: kₙ = 2.723e+02+3.240e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.723e+02+1.043e-16i m⁻¹
+
+ Sol. ||E|| = 3.558176e+01
+ Field energy E (5.670e-11 J) + H (5.681e-11 J) = 1.135e-10 J
+ S[1][1] = -5.659e-03+5.573e-03i, |S[1][1]| = -4.200e+01, arg(S[1][1]) = +1.354e+02
+ S[2][1] = +6.803e-01+7.329e-01i, |S[2][1]| = -4.190e-05, arg(S[2][1]) = +4.713e+01
+
+It 31/39: ω/2π = 8.000e+00 GHz (total elapsed time = 8.09e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.027e+01 GHz (3.353e+00)
+ Port 1, mode 1: kₙ = 2.812e+02+5.095e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.812e+02-4.240e-16i m⁻¹
+
+ Sol. ||E|| = 3.559124e+01
+ Field energy E (5.675e-11 J) + H (5.686e-11 J) = 1.136e-10 J
+ S[1][1] = -3.837e-03+5.355e-03i, |S[1][1]| = -4.362e+01, arg(S[1][1]) = +1.256e+02
+ S[2][1] = +7.996e-01+6.005e-01i, |S[2][1]| = +5.832e-05, arg(S[2][1]) = +3.691e+01
+
+It 32/39: ω/2π = 8.250e+00 GHz (total elapsed time = 8.12e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.184e+01 GHz (3.458e+00)
+ Port 1, mode 1: kₙ = 2.901e+02+5.969e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.901e+02-5.161e-16i m⁻¹
+
+ Sol. ||E|| = 3.560218e+01
+ Field energy E (5.681e-11 J) + H (5.690e-11 J) = 1.137e-10 J
+ S[1][1] = -2.210e-03+4.524e-03i, |S[1][1]| = -4.596e+01, arg(S[1][1]) = +1.160e+02
+ S[2][1] = +8.936e-01+4.490e-01i, |S[2][1]| = +1.517e-04, arg(S[2][1]) = +2.668e+01
+
+It 33/39: ω/2π = 8.500e+00 GHz (total elapsed time = 8.14e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.341e+01 GHz (3.563e+00)
+ Port 1, mode 1: kₙ = 2.990e+02-5.332e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.990e+02-1.933e-15i m⁻¹
+
+ Sol. ||E|| = 3.561409e+01
+ Field energy E (5.687e-11 J) + H (5.693e-11 J) = 1.138e-10 J
+ S[1][1] = -9.805e-04+3.185e-03i, |S[1][1]| = -4.954e+01, arg(S[1][1]) = +1.071e+02
+ S[2][1] = +9.591e-01+2.830e-01i, |S[2][1]| = +2.288e-04, arg(S[2][1]) = +1.644e+01
+
+It 34/39: ω/2π = 8.750e+00 GHz (total elapsed time = 8.16e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.498e+01 GHz (3.668e+00)
+ Port 1, mode 1: kₙ = 3.079e+02-3.901e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.079e+02+1.145e-15i m⁻¹
+
+ Sol. ||E|| = 3.562632e+01
+ Field energy E (5.694e-11 J) + H (5.696e-11 J) = 1.139e-10 J
+ S[1][1] = -3.009e-04+1.509e-03i, |S[1][1]| = -5.626e+01, arg(S[1][1]) = +1.013e+02
+ S[2][1] = +9.942e-01+1.079e-01i, |S[2][1]| = +2.822e-04, arg(S[2][1]) = +6.192e+00
+
+It 35/39: ω/2π = 9.000e+00 GHz (total elapsed time = 8.18e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.655e+01 GHz (3.773e+00)
+ Port 1, mode 1: kₙ = 3.168e+02+2.099e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.168e+02+1.769e-08i m⁻¹
+
+ Sol. ||E|| = 3.563822e+01
+ Field energy E (5.700e-11 J) + H (5.699e-11 J) = 1.140e-10 J
+ S[1][1] = -2.549e-04-2.909e-04i, |S[1][1]| = -6.825e+01, arg(S[1][1]) = -1.312e+02
+ S[2][1] = +9.975e-01-7.086e-02i, |S[2][1]| = +3.072e-04, arg(S[2][1]) = -4.063e+00
+
+It 36/39: ω/2π = 9.250e+00 GHz (total elapsed time = 8.21e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.812e+01 GHz (3.877e+00)
+ Port 1, mode 1: kₙ = 3.257e+02-6.246e-10i m⁻¹
+ Port 2, mode 1: kₙ = 3.257e+02+3.157e-08i m⁻¹
+
+ Sol. ||E|| = 3.564918e+01
+ Field energy E (5.706e-11 J) + H (5.702e-11 J) = 1.141e-10 J
+ S[1][1] = -8.461e-04-1.985e-03i, |S[1][1]| = -5.332e+01, arg(S[1][1]) = -1.131e+02
+ S[2][1] = +9.689e-01-2.475e-01i, |S[2][1]| = +3.031e-04, arg(S[2][1]) = -1.433e+01
+
+It 37/39: ω/2π = 9.500e+00 GHz (total elapsed time = 8.23e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.969e+01 GHz (3.982e+00)
+ Port 1, mode 1: kₙ = 3.347e+02+2.672e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.347e+02+4.146e-08i m⁻¹
+
+ Sol. ||E|| = 3.565871e+01
+ Field energy E (5.711e-11 J) + H (5.706e-11 J) = 1.142e-10 J
+ S[1][1] = -1.998e-03-3.357e-03i, |S[1][1]| = -4.816e+01, arg(S[1][1]) = -1.208e+02
+ S[2][1] = +9.093e-01-4.163e-01i, |S[2][1]| = +2.724e-04, arg(S[2][1]) = -2.460e+01
+
+It 38/39: ω/2π = 9.750e+00 GHz (total elapsed time = 8.26e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 6.126e+01 GHz (4.087e+00)
+ Port 1, mode 1: kₙ = 3.436e+02+5.761e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.436e+02+4.722e-08i m⁻¹
+
+ Sol. ||E|| = 3.566648e+01
+ Field energy E (5.716e-11 J) + H (5.709e-11 J) = 1.143e-10 J
+ S[1][1] = -3.562e-03-4.231e-03i, |S[1][1]| = -4.514e+01, arg(S[1][1]) = -1.301e+02
+ S[2][1] = +8.204e-01-5.718e-01i, |S[2][1]| = +2.213e-04, arg(S[2][1]) = -3.488e+01
+
+It 39/39: ω/2π = 1.000e+01 GHz (total elapsed time = 8.29e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 6.283e+01 GHz (4.192e+00)
+ Port 1, mode 1: kₙ = 3.526e+02-9.209e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.526e+02+4.683e-08i m⁻¹
+
+ Sol. ||E|| = 3.567239e+01
+ Field energy E (5.721e-11 J) + H (5.713e-11 J) = 1.143e-10 J
+ S[1][1] = -5.338e-03-4.495e-03i, |S[1][1]| = -4.313e+01, arg(S[1][1]) = -1.399e+02
+ S[2][1] = +7.051e-01-7.092e-01i, |S[2][1]| = +1.580e-04, arg(S[2][1]) = -4.517e+01
+
+Sweeping excitation index 2 (2/2):
+
+It 1/39: ω/2π = 5.000e-01 GHz (total elapsed time = 8.32e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.142e+00 GHz (2.096e-01)
+ Port 1, mode 1: kₙ = 1.743e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 1.743e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.552675e+01
+ Field energy E (5.614e-11 J) + H (5.513e-11 J) = 1.113e-10 J
+ S[1][2] = +9.395e-01-3.424e-01i, |S[1][2]| = -4.868e-05, arg(S[1][2]) = -2.003e+01
+ S[2][2] = -1.170e-03-3.174e-03i, |S[2][2]| = -4.941e+01, arg(S[2][2]) = -1.102e+02
+
+It 2/39: ω/2π = 7.500e-01 GHz (total elapsed time = 8.35e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.712e+00 GHz (3.144e-01)
+ Port 1, mode 1: kₙ = 2.614e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 2.614e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.551195e+01
+ Field energy E (5.609e-11 J) + H (5.519e-11 J) = 1.113e-10 J
+ S[1][2] = +8.657e-01-5.006e-01i, |S[1][2]| = -1.039e-04, arg(S[1][2]) = -3.004e+01
+ S[2][2] = -2.497e-03-4.268e-03i, |S[2][2]| = -4.612e+01, arg(S[2][2]) = -1.203e+02
+
+It 3/39: ω/2π = 1.000e+00 GHz (total elapsed time = 8.37e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 6.283e+00 GHz (4.192e-01)
+ Port 1, mode 1: kₙ = 3.486e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 3.486e+01-7.780e-20i m⁻¹
+
+ Sol. ||E|| = 3.549297e+01
+ Field energy E (5.604e-11 J) + H (5.527e-11 J) = 1.113e-10 J
+ S[1][2] = +7.654e-01-6.435e-01i, |S[1][2]| = -1.714e-04, arg(S[1][2]) = -4.006e+01
+ S[2][2] = -4.124e-03-4.836e-03i, |S[2][2]| = -4.394e+01, arg(S[2][2]) = -1.305e+02
+
+It 4/39: ω/2π = 1.250e+00 GHz (total elapsed time = 8.40e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 7.854e+00 GHz (5.240e-01)
+ Port 1, mode 1: kₙ = 4.358e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 4.358e+01+1.518e-19i m⁻¹
+
+ Sol. ||E|| = 3.547133e+01
+ Field energy E (5.597e-11 J) + H (5.536e-11 J) = 1.113e-10 J
+ S[1][2] = +6.418e-01-7.669e-01i, |S[1][2]| = -2.426e-04, arg(S[1][2]) = -5.007e+01
+ S[2][2] = -5.850e-03-4.807e-03i, |S[2][2]| = -4.242e+01, arg(S[2][2]) = -1.406e+02
+
+It 5/39: ω/2π = 1.500e+00 GHz (total elapsed time = 8.43e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 9.425e+00 GHz (6.288e-01)
+ Port 1, mode 1: kₙ = 5.230e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 5.230e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.544882e+01
+ Field energy E (5.591e-11 J) + H (5.546e-11 J) = 1.114e-10 J
+ S[1][2] = +4.985e-01-8.668e-01i, |S[1][2]| = -3.087e-04, arg(S[1][2]) = -6.010e+01
+ S[2][2] = -7.463e-03-4.181e-03i, |S[2][2]| = -4.136e+01, arg(S[2][2]) = -1.507e+02
+
+It 6/39: ω/2π = 1.750e+00 GHz (total elapsed time = 8.46e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.100e+01 GHz (7.335e-01)
+ Port 1, mode 1: kₙ = 6.102e+01+1.038e-19i m⁻¹
+ Port 2, mode 1: kₙ = 6.102e+01-4.154e-19i m⁻¹
+
+ Sol. ||E|| = 3.542723e+01
+ Field energy E (5.585e-11 J) + H (5.557e-11 J) = 1.114e-10 J
+ S[1][2] = +3.400e-01-9.404e-01i, |S[1][2]| = -3.612e-04, arg(S[1][2]) = -7.012e+01
+ S[2][2] = -8.765e-03-3.032e-03i, |S[2][2]| = -4.065e+01, arg(S[2][2]) = -1.609e+02
+
+It 7/39: ω/2π = 2.000e+00 GHz (total elapsed time = 8.49e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.257e+01 GHz (8.383e-01)
+ Port 1, mode 1: kₙ = 6.975e+01+6.190e-19i m⁻¹
+ Port 2, mode 1: kₙ = 6.975e+01+6.190e-19i m⁻¹
+
+ Sol. ||E|| = 3.540829e+01
+ Field energy E (5.579e-11 J) + H (5.567e-11 J) = 1.115e-10 J
+ S[1][2] = +1.711e-01-9.852e-01i, |S[1][2]| = -3.931e-04, arg(S[1][2]) = -8.015e+01
+ S[2][2] = -9.592e-03-1.497e-03i, |S[2][2]| = -4.026e+01, arg(S[2][2]) = -1.711e+02
+
+It 8/39: ω/2π = 2.250e+00 GHz (total elapsed time = 8.51e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.414e+01 GHz (9.431e-01)
+ Port 1, mode 1: kₙ = 7.849e+01-8.797e-19i m⁻¹
+ Port 2, mode 1: kₙ = 7.849e+01-1.759e-18i m⁻¹
+
+ Sol. ||E|| = 3.539347e+01
+ Field energy E (5.575e-11 J) + H (5.577e-11 J) = 1.115e-10 J
+ S[1][2] = -3.231e-03-9.999e-01i, |S[1][2]| = -4.001e-04, arg(S[1][2]) = -9.019e+01
+ S[2][2] = -9.837e-03+2.373e-04i, |S[2][2]| = -4.014e+01, arg(S[2][2]) = +1.786e+02
+
+It 9/39: ω/2π = 2.500e+00 GHz (total elapsed time = 8.53e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.571e+01 GHz (1.048e+00)
+ Port 1, mode 1: kₙ = 8.722e+01+1.204e-18i m⁻¹
+ Port 2, mode 1: kₙ = 8.722e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.538390e+01
+ Field energy E (5.573e-11 J) + H (5.586e-11 J) = 1.116e-10 J
+ S[1][2] = -1.775e-01-9.841e-01i, |S[1][2]| = -3.806e-04, arg(S[1][2]) = -1.002e+02
+ S[2][2] = -9.465e-03+1.960e-03i, |S[2][2]| = -4.030e+01, arg(S[2][2]) = +1.683e+02
+
+It 10/39: ω/2π = 2.750e+00 GHz (total elapsed time = 8.55e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.728e+01 GHz (1.153e+00)
+ Port 1, mode 1: kₙ = 9.597e+01-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 9.597e+01-0.000e+00i m⁻¹
+
+ Sol. ||E|| = 3.538026e+01
+ Field energy E (5.573e-11 J) + H (5.593e-11 J) = 1.117e-10 J
+ S[1][2] = -3.465e-01-9.380e-01i, |S[1][2]| = -3.363e-04, arg(S[1][2]) = -1.103e+02
+ S[2][2] = -8.514e-03+3.457e-03i, |S[2][2]| = -4.073e+01, arg(S[2][2]) = +1.579e+02
+
+It 11/39: ω/2π = 3.000e+00 GHz (total elapsed time = 8.57e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 1.885e+01 GHz (1.258e+00)
+ Port 1, mode 1: kₙ = 1.047e+02-4.142e-18i m⁻¹
+ Port 2, mode 1: kₙ = 1.047e+02-8.283e-18i m⁻¹
+
+ Sol. ||E|| = 3.538272e+01
+ Field energy E (5.575e-11 J) + H (5.599e-11 J) = 1.117e-10 J
+ S[1][2] = -5.049e-01-8.632e-01i, |S[1][2]| = -2.719e-04, arg(S[1][2]) = -1.203e+02
+ S[2][2] = -7.094e-03+4.542e-03i, |S[2][2]| = -4.149e+01, arg(S[2][2]) = +1.474e+02
+
+It 12/39: ω/2π = 3.250e+00 GHz (total elapsed time = 8.59e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.042e+01 GHz (1.362e+00)
+ Port 1, mode 1: kₙ = 1.135e+02-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 1.135e+02-5.252e-18i m⁻¹
+
+ Sol. ||E|| = 3.539099e+01
+ Field energy E (5.578e-11 J) + H (5.603e-11 J) = 1.118e-10 J
+ S[1][2] = -6.479e-01-7.617e-01i, |S[1][2]| = -1.947e-04, arg(S[1][2]) = -1.304e+02
+ S[2][2] = -5.372e-03+5.075e-03i, |S[2][2]| = -4.263e+01, arg(S[2][2]) = +1.366e+02
+
+It 13/39: ω/2π = 3.500e+00 GHz (total elapsed time = 8.61e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.199e+01 GHz (1.467e+00)
+ Port 1, mode 1: kₙ = 1.222e+02-0.000e+00i m⁻¹
+ Port 2, mode 1: kₙ = 1.222e+02-1.308e-17i m⁻¹
+
+ Sol. ||E|| = 3.540433e+01
+ Field energy E (5.583e-11 J) + H (5.606e-11 J) = 1.119e-10 J
+ S[1][2] = -7.711e-01-6.367e-01i, |S[1][2]| = -1.134e-04, arg(S[1][2]) = -1.405e+02
+ S[2][2] = -3.555e-03+4.982e-03i, |S[2][2]| = -4.426e+01, arg(S[2][2]) = +1.255e+02
+
+It 14/39: ω/2π = 3.750e+00 GHz (total elapsed time = 8.63e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.356e+01 GHz (1.572e+00)
+ Port 1, mode 1: kₙ = 1.310e+02-1.604e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.310e+02-1.144e-22i m⁻¹
+
+ Sol. ||E|| = 3.542164e+01
+ Field energy E (5.590e-11 J) + H (5.608e-11 J) = 1.120e-10 J
+ S[1][2] = -8.706e-01-4.920e-01i, |S[1][2]| = -3.746e-05, arg(S[1][2]) = -1.505e+02
+ S[2][2] = -1.865e-03+4.265e-03i, |S[2][2]| = -4.664e+01, arg(S[2][2]) = +1.136e+02
+
+It 15/39: ω/2π = 4.000e+00 GHz (total elapsed time = 8.65e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.513e+01 GHz (1.677e+00)
+ Port 1, mode 1: kₙ = 1.398e+02+1.941e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.398e+02+2.911e-17i m⁻¹
+
+ Sol. ||E|| = 3.544159e+01
+ Field energy E (5.598e-11 J) + H (5.610e-11 J) = 1.121e-10 J
+ S[1][2] = -9.433e-01-3.320e-01i, |S[1][2]| = +2.418e-05, arg(S[1][2]) = -1.606e+02
+ S[2][2] = -5.086e-04+3.001e-03i, |S[2][2]| = -5.033e+01, arg(S[2][2]) = +9.962e+01
+
+It 16/39: ω/2π = 4.250e+00 GHz (total elapsed time = 8.66e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.670e+01 GHz (1.781e+00)
+ Port 1, mode 1: kₙ = 1.486e+02+4.616e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.486e+02-4.640e-17i m⁻¹
+
+ Sol. ||E|| = 3.546273e+01
+ Field energy E (5.606e-11 J) + H (5.611e-11 J) = 1.122e-10 J
+ S[1][2] = -9.869e-01-1.616e-01i, |S[1][2]| = +6.441e-05, arg(S[1][2]) = -1.707e+02
+ S[2][2] = +3.432e-04+1.335e-03i, |S[2][2]| = -5.721e+01, arg(S[2][2]) = +7.558e+01
+
+It 17/39: ω/2π = 4.500e+00 GHz (total elapsed time = 8.68e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.827e+01 GHz (1.886e+00)
+ Port 1, mode 1: kₙ = 1.573e+02-2.745e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.573e+02-4.477e-17i m⁻¹
+
+ Sol. ||E|| = 3.548366e+01
+ Field energy E (5.614e-11 J) + H (5.612e-11 J) = 1.123e-10 J
+ S[1][2] = -9.999e-01+1.390e-02i, |S[1][2]| = +7.862e-05, arg(S[1][2]) = +1.792e+02
+ S[2][2] = +5.798e-04-5.376e-04i, |S[2][2]| = -6.204e+01, arg(S[2][2]) = -4.284e+01
+
+It 18/39: ω/2π = 4.750e+00 GHz (total elapsed time = 8.70e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 2.985e+01 GHz (1.991e+00)
+ Port 1, mode 1: kₙ = 1.661e+02+2.459e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.661e+02-3.961e-17i m⁻¹
+
+ Sol. ||E|| = 3.550313e+01
+ Field energy E (5.622e-11 J) + H (5.614e-11 J) = 1.124e-10 J
+ S[1][2] = -9.820e-01+1.892e-01i, |S[1][2]| = +6.543e-05, arg(S[1][2]) = +1.691e+02
+ S[2][2] = +1.641e-04-2.394e-03i, |S[2][2]| = -5.240e+01, arg(S[2][2]) = -8.608e+01
+
+It 19/39: ω/2π = 5.000e+00 GHz (total elapsed time = 8.72e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.142e+01 GHz (2.096e+00)
+ Port 1, mode 1: kₙ = 1.749e+02+3.903e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.749e+02-1.121e-16i m⁻¹
+
+ Sol. ||E|| = 3.552017e+01
+ Field energy E (5.629e-11 J) + H (5.616e-11 J) = 1.124e-10 J
+ S[1][2] = -9.335e-01+3.587e-01i, |S[1][2]| = +2.684e-05, arg(S[1][2]) = +1.590e+02
+ S[2][2] = -8.623e-04-4.010e-03i, |S[2][2]| = -4.774e+01, arg(S[2][2]) = -1.021e+02
+
+It 20/39: ω/2π = 5.250e+00 GHz (total elapsed time = 8.74e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.299e+01 GHz (2.201e+00)
+ Port 1, mode 1: kₙ = 1.837e+02-8.204e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.837e+02+4.311e-17i m⁻¹
+
+ Sol. ||E|| = 3.553415e+01
+ Field energy E (5.635e-11 J) + H (5.619e-11 J) = 1.125e-10 J
+ S[1][2] = -8.559e-01+5.172e-01i, |S[1][2]| = -3.191e-05, arg(S[1][2]) = +1.489e+02
+ S[2][2] = -2.383e-03-5.191e-03i, |S[2][2]| = -4.486e+01, arg(S[2][2]) = -1.147e+02
+
+It 21/39: ω/2π = 5.500e+00 GHz (total elapsed time = 8.75e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.456e+01 GHz (2.305e+00)
+ Port 1, mode 1: kₙ = 1.926e+02-4.161e-17i m⁻¹
+ Port 2, mode 1: kₙ = 1.926e+02-9.874e-17i m⁻¹
+
+ Sol. ||E|| = 3.554479e+01
+ Field energy E (5.640e-11 J) + H (5.624e-11 J) = 1.126e-10 J
+ S[1][2] = -7.515e-01+6.597e-01i, |S[1][2]| = -1.030e-04, arg(S[1][2]) = +1.387e+02
+ S[2][2] = -4.221e-03-5.790e-03i, |S[2][2]| = -4.289e+01, arg(S[2][2]) = -1.261e+02
+
+It 22/39: ω/2π = 5.750e+00 GHz (total elapsed time = 8.77e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.613e+01 GHz (2.410e+00)
+ Port 1, mode 1: kₙ = 2.014e+02-2.939e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.014e+02-1.124e-16i m⁻¹
+
+ Sol. ||E|| = 3.555223e+01
+ Field energy E (5.645e-11 J) + H (5.629e-11 J) = 1.127e-10 J
+ S[1][2] = -6.236e-01+7.817e-01i, |S[1][2]| = -1.768e-04, arg(S[1][2]) = +1.286e+02
+ S[2][2] = -6.159e-03-5.732e-03i, |S[2][2]| = -4.150e+01, arg(S[2][2]) = -1.371e+02
+
+It 23/39: ω/2π = 6.000e+00 GHz (total elapsed time = 8.79e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.770e+01 GHz (2.515e+00)
+ Port 1, mode 1: kₙ = 2.102e+02+3.008e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.102e+02-1.908e-16i m⁻¹
+
+ Sol. ||E|| = 3.555691e+01
+ Field energy E (5.648e-11 J) + H (5.635e-11 J) = 1.128e-10 J
+ S[1][2] = -4.761e-01+8.794e-01i, |S[1][2]| = -2.433e-04, arg(S[1][2]) = +1.184e+02
+ S[2][2] = -7.966e-03-5.020e-03i, |S[2][2]| = -4.052e+01, arg(S[2][2]) = -1.478e+02
+
+It 24/39: ω/2π = 6.250e+00 GHz (total elapsed time = 8.80e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 3.927e+01 GHz (2.620e+00)
+ Port 1, mode 1: kₙ = 2.191e+02-5.243e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.191e+02+7.155e-17i m⁻¹
+
+ Sol. ||E|| = 3.555956e+01
+ Field energy E (5.651e-11 J) + H (5.642e-11 J) = 1.129e-10 J
+ S[1][2] = -3.135e-01+9.496e-01i, |S[1][2]| = -2.931e-04, arg(S[1][2]) = +1.083e+02
+ S[2][2] = -9.424e-03-3.736e-03i, |S[2][2]| = -3.988e+01, arg(S[2][2]) = -1.584e+02
+
+It 25/39: ω/2π = 6.500e+00 GHz (total elapsed time = 8.82e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.084e+01 GHz (2.725e+00)
+ Port 1, mode 1: kₙ = 2.279e+02-9.792e-16i m⁻¹
+ Port 2, mode 1: kₙ = 2.279e+02-1.849e-16i m⁻¹
+
+ Sol. ||E|| = 3.556105e+01
+ Field energy E (5.654e-11 J) + H (5.649e-11 J) = 1.130e-10 J
+ S[1][2] = -1.409e-01+9.900e-01i, |S[1][2]| = -3.188e-04, arg(S[1][2]) = +9.810e+01
+ S[2][2] = -1.036e-02-2.033e-03i, |S[2][2]| = -3.953e+01, arg(S[2][2]) = -1.689e+02
+
+It 26/39: ω/2π = 6.750e+00 GHz (total elapsed time = 8.84e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.241e+01 GHz (2.829e+00)
+ Port 1, mode 1: kₙ = 2.368e+02+1.562e-09i m⁻¹
+ Port 2, mode 1: kₙ = 2.368e+02-8.942e-17i m⁻¹
+
+ Sol. ||E|| = 3.556232e+01
+ Field energy E (5.656e-11 J) + H (5.656e-11 J) = 1.131e-10 J
+ S[1][2] = +3.619e-02+9.993e-01i, |S[1][2]| = -3.156e-04, arg(S[1][2]) = +8.793e+01
+ S[2][2] = -1.066e-02-1.164e-04i, |S[2][2]| = -3.945e+01, arg(S[2][2]) = -1.794e+02
+
+It 27/39: ω/2π = 7.000e+00 GHz (total elapsed time = 8.86e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.398e+01 GHz (2.934e+00)
+ Port 1, mode 1: kₙ = 2.456e+02-4.207e-09i m⁻¹
+ Port 2, mode 1: kₙ = 2.456e+02+3.182e-16i m⁻¹
+
+ Sol. ||E|| = 3.556424e+01
+ Field energy E (5.659e-11 J) + H (5.663e-11 J) = 1.132e-10 J
+ S[1][2] = +2.123e-01+9.772e-01i, |S[1][2]| = -2.824e-04, arg(S[1][2]) = +7.774e+01
+ S[2][2] = -1.028e-02+1.784e-03i, |S[2][2]| = -3.963e+01, arg(S[2][2]) = +1.702e+02
+
+It 28/39: ω/2π = 7.250e+00 GHz (total elapsed time = 8.87e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.555e+01 GHz (3.039e+00)
+ Port 1, mode 1: kₙ = 2.545e+02-8.811e-09i m⁻¹
+ Port 2, mode 1: kₙ = 2.545e+02+2.530e-16i m⁻¹
+
+ Sol. ||E|| = 3.556755e+01
+ Field energy E (5.662e-11 J) + H (5.670e-11 J) = 1.133e-10 J
+ S[1][2] = +3.819e-01+9.242e-01i, |S[1][2]| = -2.214e-04, arg(S[1][2]) = +6.755e+01
+ S[2][2] = -9.280e-03+3.437e-03i, |S[2][2]| = -4.009e+01, arg(S[2][2]) = +1.597e+02
+
+It 29/39: ω/2π = 7.500e+00 GHz (total elapsed time = 8.89e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.712e+01 GHz (3.144e+00)
+ Port 1, mode 1: kₙ = 2.634e+02-1.740e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.634e+02-9.407e-17i m⁻¹
+
+ Sol. ||E|| = 3.557274e+01
+ Field energy E (5.666e-11 J) + H (5.676e-11 J) = 1.134e-10 J
+ S[1][2] = +5.396e-01+8.419e-01i, |S[1][2]| = -1.385e-04, arg(S[1][2]) = +5.734e+01
+ S[2][2] = -7.776e-03+4.643e-03i, |S[2][2]| = -4.086e+01, arg(S[2][2]) = +1.492e+02
+
+It 30/39: ω/2π = 7.750e+00 GHz (total elapsed time = 8.91e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 4.869e+01 GHz (3.249e+00)
+ Port 1, mode 1: kₙ = 2.723e+02+3.240e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.723e+02+1.043e-16i m⁻¹
+
+ Sol. ||E|| = 3.558005e+01
+ Field energy E (5.670e-11 J) + H (5.681e-11 J) = 1.135e-10 J
+ S[1][2] = +6.803e-01+7.329e-01i, |S[1][2]| = -4.190e-05, arg(S[1][2]) = +4.713e+01
+ S[2][2] = -5.954e-03+5.257e-03i, |S[2][2]| = -4.200e+01, arg(S[2][2]) = +1.386e+02
+
+It 31/39: ω/2π = 8.000e+00 GHz (total elapsed time = 8.92e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.027e+01 GHz (3.353e+00)
+ Port 1, mode 1: kₙ = 2.812e+02+5.095e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.812e+02-4.240e-16i m⁻¹
+
+ Sol. ||E|| = 3.558943e+01
+ Field energy E (5.675e-11 J) + H (5.686e-11 J) = 1.136e-10 J
+ S[1][2] = +7.996e-01+6.005e-01i, |S[1][2]| = +5.832e-05, arg(S[1][2]) = +3.691e+01
+ S[2][2] = -4.037e-03+5.205e-03i, |S[2][2]| = -4.363e+01, arg(S[2][2]) = +1.278e+02
+
+It 32/39: ω/2π = 8.250e+00 GHz (total elapsed time = 8.94e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.184e+01 GHz (3.458e+00)
+ Port 1, mode 1: kₙ = 2.901e+02+5.969e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.901e+02-5.161e-16i m⁻¹
+
+ Sol. ||E|| = 3.560056e+01
+ Field energy E (5.681e-11 J) + H (5.690e-11 J) = 1.137e-10 J
+ S[1][2] = +8.936e-01+4.490e-01i, |S[1][2]| = +1.517e-04, arg(S[1][2]) = +2.668e+01
+ S[2][2] = -2.262e-03+4.498e-03i, |S[2][2]| = -4.596e+01, arg(S[2][2]) = +1.167e+02
+
+It 33/39: ω/2π = 8.500e+00 GHz (total elapsed time = 8.96e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.341e+01 GHz (3.563e+00)
+ Port 1, mode 1: kₙ = 2.990e+02-5.332e-08i m⁻¹
+ Port 2, mode 1: kₙ = 2.990e+02-1.933e-15i m⁻¹
+
+ Sol. ||E|| = 3.561290e+01
+ Field energy E (5.687e-11 J) + H (5.693e-11 J) = 1.138e-10 J
+ S[1][2] = +9.591e-01+2.830e-01i, |S[1][2]| = +2.288e-04, arg(S[1][2]) = +1.644e+01
+ S[2][2] = -8.461e-04+3.225e-03i, |S[2][2]| = -4.954e+01, arg(S[2][2]) = +1.047e+02
+
+It 34/39: ω/2π = 8.750e+00 GHz (total elapsed time = 8.98e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.498e+01 GHz (3.668e+00)
+ Port 1, mode 1: kₙ = 3.079e+02-3.901e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.079e+02+1.145e-15i m⁻¹
+
+ Sol. ||E|| = 3.562580e+01
+ Field energy E (5.694e-11 J) + H (5.696e-11 J) = 1.139e-10 J
+ S[1][2] = +9.942e-01+1.079e-01i, |S[1][2]| = +2.822e-04, arg(S[1][2]) = +6.192e+00
+ S[2][2] = +3.811e-05+1.546e-03i, |S[2][2]| = -5.621e+01, arg(S[2][2]) = +8.859e+01
+
+It 35/39: ω/2π = 9.000e+00 GHz (total elapsed time = 9.00e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.655e+01 GHz (3.773e+00)
+ Port 1, mode 1: kₙ = 3.168e+02+2.099e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.168e+02+1.769e-08i m⁻¹
+
+ Sol. ||E|| = 3.563852e+01
+ Field energy E (5.700e-11 J) + H (5.699e-11 J) = 1.140e-10 J
+ S[1][2] = +9.975e-01-7.086e-02i, |S[1][2]| = +3.072e-04, arg(S[1][2]) = -4.063e+00
+ S[2][2] = +2.834e-04-3.295e-04i, |S[2][2]| = -6.724e+01, arg(S[2][2]) = -4.929e+01
+
+It 36/39: ω/2π = 9.250e+00 GHz (total elapsed time = 9.01e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.812e+01 GHz (3.877e+00)
+ Port 1, mode 1: kₙ = 3.257e+02-6.246e-10i m⁻¹
+ Port 2, mode 1: kₙ = 3.257e+02+3.157e-08i m⁻¹
+
+ Sol. ||E|| = 3.565039e+01
+ Field energy E (5.706e-11 J) + H (5.702e-11 J) = 1.141e-10 J
+ S[1][2] = +9.689e-01-2.475e-01i, |S[1][2]| = +3.031e-04, arg(S[1][2]) = -1.433e+01
+ S[2][2] = -1.375e-04-2.167e-03i, |S[2][2]| = -5.327e+01, arg(S[2][2]) = -9.363e+01
+
+It 37/39: ω/2π = 9.500e+00 GHz (total elapsed time = 9.03e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 5.969e+01 GHz (3.982e+00)
+ Port 1, mode 1: kₙ = 3.347e+02+2.672e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.347e+02+4.146e-08i m⁻¹
+
+ Sol. ||E|| = 3.566081e+01
+ Field energy E (5.712e-11 J) + H (5.705e-11 J) = 1.142e-10 J
+ S[1][2] = +9.093e-01-4.163e-01i, |S[1][2]| = +2.724e-04, arg(S[1][2]) = -2.460e+01
+ S[2][2] = -1.169e-03-3.737e-03i, |S[2][2]| = -4.814e+01, arg(S[2][2]) = -1.074e+02
+
+It 38/39: ω/2π = 9.750e+00 GHz (total elapsed time = 9.05e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 6.126e+01 GHz (4.087e+00)
+ Port 1, mode 1: kₙ = 3.436e+02+5.761e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.436e+02+4.722e-08i m⁻¹
+
+ Sol. ||E|| = 3.566941e+01
+ Field energy E (5.717e-11 J) + H (5.709e-11 J) = 1.143e-10 J
+ S[1][2] = +8.204e-01-5.718e-01i, |S[1][2]| = +2.213e-04, arg(S[1][2]) = -3.488e+01
+ S[2][2] = -2.681e-03-4.847e-03i, |S[2][2]| = -4.513e+01, arg(S[2][2]) = -1.189e+02
+
+It 39/39: ω/2π = 1.000e+01 GHz (total elapsed time = 9.06e+01 s)
+
+Calculating boundary modes at wave ports for ω/2π = 6.283e+01 GHz (4.192e+00)
+ Port 1, mode 1: kₙ = 3.526e+02-9.209e-08i m⁻¹
+ Port 2, mode 1: kₙ = 3.526e+02+4.683e-08i m⁻¹
+
+ Sol. ||E|| = 3.567597e+01
+ Field energy E (5.721e-11 J) + H (5.713e-11 J) = 1.143e-10 J
+ S[1][2] = +7.051e-01-7.092e-01i, |S[1][2]| = +1.580e-04, arg(S[1][2]) = -4.517e+01
+ S[2][2] = -4.482e-03-5.358e-03i, |S[2][2]| = -4.312e+01, arg(S[2][2]) = -1.299e+02
+
+Completed 0 iterations of adaptive mesh refinement (AMR):
+ Indicator norm = 1.406e-01, global unknowns = 105850
+ Max. iterations = 0, tol. = 1.000e-02
+
+Estimated peak per-rank memory usage is: Min. 1.2G, Max. 1.2G, Avg. 1.2G, Total 2.4G
+Estimated peak per-node memory usage is: Min. 2.4G, Max. 2.4G, Avg. 2.4G, Total 2.4G
+
+Elapsed Time Report (s)           Min.        Max.        Avg.
+==============================================================
+Initialization                   0.079       0.083       0.081
+  Mesh Preprocessing             0.188       0.188       0.188
+Operator Construction            9.829       9.838       9.834
+  Wave Ports                     3.657       4.426       4.041
+Linear Solve                     0.258       0.268       0.263
+  Setup                         57.691      57.708      57.700
+  Preconditioner                 2.440       2.485       2.463
+PROM Construction                0.439       0.441       0.440
+PROM Solve                       0.150       0.153       0.151
+Estimation                       0.270       0.270       0.270
+  Construction                   0.459       0.460       0.460
+  Solve                         11.566      11.567      11.566
+Postprocessing                   3.876       4.658       4.267
+Disk IO                          0.111       0.114       0.113
+--------------------------------------------------------------
+Total                           91.869      91.869      91.869
+
