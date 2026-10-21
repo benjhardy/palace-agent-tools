@@ -184,7 +184,7 @@ def _sol005(ctx: Ctx):
 @rule("SOL006", "Element order",
       "Order 1 shifted a birdcage k=1 mode by 1.25 % against order 2 on the same mesh; order 3 costs ~3x the "
       "unknowns per element of order 2 (21 vs 7 per tet).",
-      "birdcage, hfss-vs-palace", "config/solver/")
+      "birdcage, microstrip-amr", "config/solver/")
 def _sol006(ctx: Ctx):
     o = ctx.cfg.get("Solver", {}).get("Order", 1)
     if o == 1 and ctx.ptype in ("Driven", "Eigenmode"):
@@ -460,7 +460,7 @@ def _prt013(ctx: Ctx):
       "substrate-filled mode n_eff = sqrt(4.4) at 39k unknowns on a CPW; to n_eff = 1 at 295k on a waveguide tee). "
       "'Nonconformal': false ran to 470k unknowns with a steady kn. Palace 0.17 fixed 'nonconformal AMR erroneous "
       "results when waveports are present'.",
-      "hfss-vs-palace", "config/model/")
+      "microstrip-amr", "config/model/")
 def _prt014(ctx: Ctx):
     ref = ctx.cfg.get("Model", {}).get("Refinement", {})
     if _wave(ctx) and ref.get("MaxIts", 0) > 0 and ref.get("Nonconformal", True) and ctx.version < (0, 17):
@@ -472,7 +472,7 @@ def _prt014(ctx: Ctx):
       "Palace 0.16's port-mode solve treats Conductivity boundaries as PEC (lossless kn). A de-embedded (Offset) "
       "length therefore carries no conductor loss: a 1-inch CPW read -0.001 dB instead of -0.30 dB, and beta is "
       "low by about alpha. 0.17 changed the wave-port formulation to support impedance boundaries.",
-      "hfss-vs-palace", "config/boundaries/")
+      "microstrip-amr", "config/boundaries/")
 def _prt015(ctx: Ctx):
     if ctx.version >= (0, 17) or not ctx.bnd.get("Conductivity"):
         return
@@ -735,7 +735,7 @@ def _mod004(ctx: Ctx):
 @rule("AMR001", "AMR without a size cap",
       "Palace's Dorfler marking (UpdateFraction 0.7) grew meshes 1.3-2.8x per pass; MaxSize is checked after "
       "refining, so a 450k cap ended at 623k unknowns (14 GB). Without MaxSize the last pass can exhaust RAM.",
-      "hfss-vs-palace", "config/model/")
+      "microstrip-amr", "config/model/")
 def _amr001(ctx: Ctx):
     ref = ctx.cfg.get("Model", {}).get("Refinement", {})
     if ref.get("MaxIts", 0) > 0 and not ref.get("MaxSize"):
@@ -746,7 +746,7 @@ def _amr001(ctx: Ctx):
 @rule("AMR002", "AMR over a whole frequency sweep",
       "Every AMR pass re-solves every frequency point. The cheaper pattern (HFSS-like): adapt at one or a few "
       "frequencies, then sweep on the adapted mesh (load the saved mesh, or reuse the refinement in a second run).",
-      "hfss-vs-palace", "config/model/")
+      "microstrip-amr", "config/model/")
 def _amr002(ctx: Ctx):
     ref = ctx.cfg.get("Model", {}).get("Refinement", {})
     if ctx.ptype == "Driven" and ref.get("MaxIts", 0) > 0:
@@ -761,7 +761,7 @@ def _amr002(ctx: Ctx):
       "On an 8-rod interdigital filter the band-centre phase of S21 still moved 7 deg between the last two AMR passes "
       "at 623k (p2) and 673k (p3) unknowns; seeding the mesh along the resonators and order 3 got closest per "
       "unknown. Judge convergence on the quantity you need, between passes.",
-      "hfss-vs-palace", "config/model/")
+      "microstrip-amr", "config/model/")
 def _amr003(ctx: Ctx):
     ref = ctx.cfg.get("Model", {}).get("Refinement", {})
     if ref.get("MaxIts", 0) > 0 and ref.get("UpdateFraction", 0.7) >= 0.7 and ref.get("Tol", 1e-2) >= 1e-2:
@@ -868,7 +868,7 @@ def _drv003(ctx: Ctx):
 @rule("DRV004", "Many direct frequency points",
       "Each direct point is a full factorisation/solve per excitation; the adaptive sweep needs ~5-12 full solves "
       "per excitation for a smooth band.",
-      "wilkinson, hfss-vs-palace", "config/solver/")
+      "wilkinson, microstrip-amr", "config/solver/")
 def _drv004(ctx: Ctx):
     drv = ctx.cfg.get("Solver", {}).get("Driven", {})
     if ctx.ptype == "Driven" and not drv.get("AdaptiveTol"):

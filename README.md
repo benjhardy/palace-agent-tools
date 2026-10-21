@@ -12,7 +12,7 @@ Palace is a capable open-source FEM solver, but most mistakes in a Palace model 
 no error: a mesh read in micrometres, a boundary tag that Palace silently ignores, absorbing walls that fake a
 loss, a solver choice that gives wrong points on some rank counts, S-parameters that are never written. This
 package turns the lessons from a series of Palace projects (MRI birdcage coil, Wilkinson divider, lumped-filter
-port tuning, an HFSS-vs-Palace comparison, a GDS-to-Palace benchmark, a mmWave PA) into tools an agent calls
+port tuning, an microstrip AMR study, a GDS-to-Palace benchmark, a mmWave PA) into tools an agent calls
 with one JSON object and gets one JSON object back:
 
 | step | tool | what it does |
@@ -142,9 +142,9 @@ All 44 rules with their full lessons: [skills/palace-simulation/references/gotch
 | wave port smaller than the mode | 3-6 % loss falling with frequency on a bare line; use the whole end face | benchmark | PRT013 |
 | adaptive sweep in a closed box | aborted after the first sample ("singular matrix", SuperLU); direct points worked | benchmark | BND002 |
 | adaptive sweep online phase | 2.6 s per frequency per excitation at 258k unknowns: 97 of 128 min | port tuning | DRV003 |
-| nonconformal AMR with wave ports | the port mode jumped to a spurious mode (n_eff = sqrt(4.4)); conformal refinement fixed it | HFSS-vs-Palace | PRT014 |
-| wave-port de-embedding with lossy conductors | the de-embedded length carries no conductor loss in 0.16 (-0.001 vs -0.30 dB per inch) | HFSS-vs-Palace | PRT015 |
-| AMR size cap | checked after refining: a 450k cap ended at 623k unknowns, 14 GB | HFSS-vs-Palace | AMR001 |
+| nonconformal AMR with wave ports | the port mode jumped to a spurious mode (n_eff = sqrt(4.4)); conformal refinement fixed it | microstrip-amr | PRT014 |
+| wave-port de-embedding with lossy conductors | the de-embedded length carries no conductor loss in 0.16 (-0.001 vs -0.30 dB per inch) | microstrip-amr | PRT015 |
+| AMR size cap | checked after refining: a 450k cap ended at 623k unknowns, 14 GB | microstrip-amr | AMR001 |
 | several excitations with field output | only the last excitation's ParaView fields are kept (0.16) | Wilkinson | PRT016 |
 | `Model.L0` missing | the mesh is read in micrometres | Palace docs | MOD001 |
 | tag typo | Palace prints "Unknown ... boundary attributes! Solver will just ignore them!" and runs on | Palace source | BND005 |

@@ -1911,7 +1911,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr10_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -1939,7 +1939,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr10_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -1967,7 +1967,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr_c2.5_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -1995,7 +1995,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c2.5_p2",
    "problem": "Driven",
    "order": 2,
@@ -2023,7 +2023,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c3_p2",
    "problem": "Driven",
    "order": 2,
@@ -2051,7 +2051,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c3_p3",
    "problem": "Driven",
    "order": 3,
@@ -2079,7 +2079,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c3_p3_iter",
    "problem": "Driven",
    "order": 3,
@@ -2107,7 +2107,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c3_p3_iter_np8",
    "problem": "Driven",
    "order": 3,
@@ -2135,7 +2135,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c3_p3_iter_np8_q",
    "problem": "Driven",
    "order": 3,
@@ -2163,7 +2163,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c4_p2",
    "problem": "Driven",
    "order": 2,
@@ -2191,7 +2191,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_c4_p3",
    "problem": "Driven",
    "order": 3,
@@ -2219,7 +2219,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_h12_u0_p2",
    "problem": "Driven",
    "order": 2,
@@ -2247,7 +2247,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_h12_u1_p2",
    "problem": "Driven",
    "order": 2,
@@ -2275,7 +2275,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_h4.5_u0_p2",
    "problem": "Driven",
    "order": 2,
@@ -2303,7 +2303,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_h4.5_u1_p2",
    "problem": "Driven",
    "order": 2,
@@ -2331,7 +2331,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_h6_u0_p2",
    "problem": "Driven",
    "order": 2,
@@ -2359,7 +2359,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "fix_h6_u1_p2",
    "problem": "Driven",
    "order": 2,
@@ -2387,7 +2387,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "prom_c3_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -2415,7 +2415,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "viz_c3",
    "problem": "Driven",
    "order": 1,
@@ -2443,7 +2443,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr2_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -2471,7 +2471,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr2_p2_np4_q",
    "problem": "Driven",
    "order": 2,
@@ -2499,7 +2499,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr2_p2_np4_rep",
    "problem": "Driven",
    "order": 2,
@@ -2527,7 +2527,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr4_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -2555,7 +2555,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr6c_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -2583,7 +2583,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "sweep_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -2611,7 +2611,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "sweep_p2_np4_q",
    "problem": "Driven",
    "order": 2,
@@ -2639,7 +2639,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "viz_cpw0",
    "problem": "Driven",
    "order": 1,
@@ -2667,7 +2667,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "viz_cpw_amr2",
    "problem": "Driven",
    "order": 1,
@@ -2695,7 +2695,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr1_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -2723,7 +2723,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr1_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -2751,7 +2751,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr1_p3_np4_q",
    "problem": "Driven",
    "order": 3,
@@ -2779,7 +2779,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr1_p3_np4_rep",
    "problem": "Driven",
    "order": 3,
@@ -2807,7 +2807,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amr1_p3_np8",
    "problem": "Driven",
    "order": 3,
@@ -2835,7 +2835,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amrref_p2_np4",
    "problem": "Driven",
    "order": 2,
@@ -2863,7 +2863,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "amrref_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -2891,7 +2891,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "prom41_amr1_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -2919,7 +2919,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "prom41_amr1_p3_np4_q",
    "problem": "Driven",
    "order": 3,
@@ -2947,7 +2947,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "prom41_amr1_p3_np4_rep",
    "problem": "Driven",
    "order": 3,
@@ -2975,7 +2975,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "s41_amr1_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -3003,7 +3003,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "s9_amr1_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -3031,7 +3031,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "s9_amr1_p3_np8",
    "problem": "Driven",
    "order": 3,
@@ -3059,7 +3059,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "s9_ref_p3_np4",
    "problem": "Driven",
    "order": 3,
@@ -3087,7 +3087,7 @@
    "palace_version": "v0.16.0-34-gea2e7b23"
   },
   {
-   "project": "hfss-vs-palace",
+   "project": "microstrip-amr",
    "run": "viz_amr1_p3",
    "problem": "Driven",
    "order": 1,

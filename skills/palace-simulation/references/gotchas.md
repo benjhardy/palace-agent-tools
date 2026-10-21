@@ -36,7 +36,7 @@ Source: Palace docs. Docs: https://awslabs.github.io/palace/v0.16.0/config/solve
 
 Order 1 shifted a birdcage k=1 mode by 1.25 % against order 2 on the same mesh; order 3 costs ~3x the unknowns per element of order 2 (21 vs 7 per tet).
 
-Source: birdcage, hfss-vs-palace. Docs: https://awslabs.github.io/palace/v0.16.0/config/solver/
+Source: birdcage, microstrip-amr. Docs: https://awslabs.github.io/palace/v0.16.0/config/solver/
 
 ## PRT001: Mixed wave and lumped ports
 
@@ -120,13 +120,13 @@ Source: gds-bench (G01). Docs: https://awslabs.github.io/palace/v0.16.0/guide/bo
 
 In Palace 0.16 the port eigen-solve switched to a spurious mode during nonconformal AMR (to the substrate-filled mode n_eff = sqrt(4.4) at 39k unknowns on a CPW; to n_eff = 1 at 295k on a waveguide tee). 'Nonconformal': false ran to 470k unknowns with a steady kn. Palace 0.17 fixed 'nonconformal AMR erroneous results when waveports are present'.
 
-Source: hfss-vs-palace. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
+Source: microstrip-amr. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
 
 ## PRT015: Wave-port de-embedding ignores conductor loss in 0.16
 
 Palace 0.16's port-mode solve treats Conductivity boundaries as PEC (lossless kn). A de-embedded (Offset) length therefore carries no conductor loss: a 1-inch CPW read -0.001 dB instead of -0.30 dB, and beta is low by about alpha. 0.17 changed the wave-port formulation to support impedance boundaries.
 
-Source: hfss-vs-palace. Docs: https://awslabs.github.io/palace/v0.16.0/config/boundaries/
+Source: microstrip-amr. Docs: https://awslabs.github.io/palace/v0.16.0/config/boundaries/
 
 ## PRT016: Field output with several excitations
 
@@ -210,19 +210,19 @@ Source: wilkinson. Docs: https://awslabs.github.io/palace/v0.16.0/config/problem
 
 Palace's Dorfler marking (UpdateFraction 0.7) grew meshes 1.3-2.8x per pass; MaxSize is checked after refining, so a 450k cap ended at 623k unknowns (14 GB). Without MaxSize the last pass can exhaust RAM.
 
-Source: hfss-vs-palace. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
+Source: microstrip-amr. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
 
 ## AMR002: AMR over a whole frequency sweep
 
 Every AMR pass re-solves every frequency point. The cheaper pattern (HFSS-like): adapt at one or a few frequencies, then sweep on the adapted mesh (load the saved mesh, or reuse the refinement in a second run).
 
-Source: hfss-vs-palace. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
+Source: microstrip-amr. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
 
 ## AMR003: AMR convergence is slow on resonant structures
 
 On an 8-rod interdigital filter the band-centre phase of S21 still moved 7 deg between the last two AMR passes at 623k (p2) and 673k (p3) unknowns; seeding the mesh along the resonators and order 3 got closest per unknown. Judge convergence on the quantity you need, between passes.
 
-Source: hfss-vs-palace. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
+Source: microstrip-amr. Docs: https://awslabs.github.io/palace/v0.16.0/config/model/
 
 ## EIG001: Eigenmode target
 
@@ -264,7 +264,7 @@ Source: port-tuning, wilkinson. Docs: https://awslabs.github.io/palace/v0.16.0/c
 
 Each direct point is a full factorisation/solve per excitation; the adaptive sweep needs ~5-12 full solves per excitation for a smooth band.
 
-Source: wilkinson, hfss-vs-palace. Docs: https://awslabs.github.io/palace/v0.16.0/config/solver/
+Source: wilkinson, microstrip-amr. Docs: https://awslabs.github.io/palace/v0.16.0/config/solver/
 
 # Workflow lessons (not lint rules)
 
