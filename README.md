@@ -1,5 +1,9 @@
 # palace-agent-tools
 
+[![tests](https://github.com/benjhardy/palace-agent-tools/actions/workflows/tests.yml/badge.svg)](https://github.com/benjhardy/palace-agent-tools/actions/workflows/tests.yml)
+
+Part of agent.rf — the RF lab: https://benjhardy.github.io/agent-rf/
+
 Tools that let AI coding agents (Claude Code, Codex, Cursor, or a plain script) set up, lint, run, check and
 post-process [AWS Palace](https://github.com/awslabs/palace) finite-element electromagnetic simulations
 reliably.
